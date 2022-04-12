@@ -1,0 +1,32 @@
+
+{% extends 'base.html'%}
+{% block content %}
+{% if ism == 'Bonu' %}
+<h1>Hello, admin- {{ism}} Welcome web site</h1>
+{%else%}
+<h4>You are not admin </h4>
+
+{% endif %}
+<div class="ui piled segment">
+    <h3 class="ui header">The result</h3>
+    <table class="ui called large table ">
+        <thead>
+            <tr>
+                <th><i class="united kingdom flag"></i>English</th>
+                <th> <i class="uzbekistan flag"></i> Uzbek</th>
+            </tr>
+        </thead>
+        <tbody>
+
+            {% if search %}
+            {% for trans in search %}
+            <tr>
+                <td>{{trans.eng}}</td>
+                <td>{{trans.uz}}</td>
+            </tr>
+            {% endfor %}
+            {% endif %}
+        </tbody>
+    </table>
+</div>
+{% endblock content %}

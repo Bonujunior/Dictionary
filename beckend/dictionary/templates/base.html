@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+{% load  static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{% static '/semantic_ui/semantic.min.css'%}">
+    <title>Dictionary</title>
+</head>
+<body>
+    <div class="ui header segment">
+        <div class="ui container">
+            <h1 class="ui header"> OnLiNe DiCtIoNaRy </h1>
+            <div class="ui divider"></div>
+            <p>Speed, Convenience, Free Translator</p>
+        </div>
+
+    </div>
+    <div class="ui container">
+        <div class="ui placeholder segment">
+        
+                    <div class="inline" style="margin-bottom: 20px;">
+                        <div class="ui primary button"><a href="" style="color:white">English-Uzbek</a></div>
+                        <div class="ui button"><a href="#" style="color: black;">O'zbekcha-Inglizcha</a></div>
+                    </div>
+                 
+            <div class="inline" style="width:90%">
+                <div class="ui massive form search">
+                    <form method="GET" action="/" class="ui icon input" style="width:100%">
+                        <input type="text" value="{{q}}" placeholder="Search word ...."  name='q' class="prompt">
+                        <i class="search link icon"> </i>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <!-- content -->
+       {% block content %}
+       
+       {% endblock content %}
+    </div>
+</body>
+</html>
